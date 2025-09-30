@@ -3,9 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Práctica alumnado</title>
+    <link rel="stylesheet" href="estilos/estilos.css">
+
 </head>
 <body>
+    <h2>Registro de Alumnado Centro Somorrostro</h2>
+    <br>
+    <form action="php/insertar.php" method="post">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="" required><br><br>
+
+        <label for="apellidos">Apellidos</label>
+        <input type="text" name="apellidos" id="" required> <br><br>
+
+        <label for="fecha_nacimiento">Fecha de Nacimiento</label>
+        <input type="date" name="fecha_nacimiento" id=""required> <br><br>
+
+        <!--quitado el label de la descripción para conseguir que quede todo en una linea-->
+        <strong>Curso de la ESO en el que está matriculado:</strong>
+        <input type="radio" name="curso" id="" value=1 required>1º
+        <input type="radio" name="curso" id="" value=2>2º
+        <input type="radio" name="curso" id="" value=3>3º
+        <input type="radio" name="curso" id="" value=4>4º
+        <br><br>   
+        
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id=""required> <br><br>
+
+        <label for="contrasena">Contraseña Educamos</label>
+        <input type="password" name="contrasena" id="" required> <br><br>
+    
+        <input type="submit" value="Registrar alumno">
+        <!--  tambien vale esto 
+        <button type="submit">Registrar alumno</button> -->
+    </form>
+    <br><br>
+
+    <div class="listado">
+        <!--listado de la base de datos-->
+        <iframe src="php/listado.php" style="border:none;"></iframe>
+    </div>
     
 </body>
 </html>
