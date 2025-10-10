@@ -1,0 +1,47 @@
+web de la api
+https://openf1.org/#drivers
+
+Drivers
+Provides information about drivers for each session.
+
+HTTP Request
+GET https://api.openf1.org/v1/drivers 
+
+Sample URL
+https://api.openf1.org/v1/drivers?driver_number=1&session_key=9158
+
+Attributes
+Name	Description
+broadcast_name	The driver's name, as displayed on TV.
+country_code	A code that uniquely identifies the country.
+driver_number	The unique number assigned to an F1 driver (cf. Wikipedia).
+first_name	The driver's first name.
+full_name	The driver's full name.
+headshot_url	URL of the driver's face photo.
+last_name	The driver's last name.
+meeting_key	The unique identifier for the meeting. Use to identify the latest or current meeting.latest
+name_acronym	Three-letter acronym of the driver's name.
+session_key	The unique identifier for the session. Use to identify the latest or current session.latest
+team_colour	The hexadecimal color value (RRGGBB) of the driver's team.
+team_name	Name of the driver's team.
+
+ejemplo de salida
+curl "https://api.openf1.org/v1/drivers?driver_number=1&session_key=9158"
+Output:
+
+[
+  {
+    "broadcast_name": "M VERSTAPPEN",
+    "country_code": "NED",
+    "driver_number": 1,
+    "first_name": "Max",
+    "full_name": "Max VERSTAPPEN",
+    "headshot_url": "https://www.formula1.com/content/dam/fom-website/drivers/M/MAXVER01_Max_Verstappen/maxver01.png.transform/1col/image.png",
+    "last_name": "Verstappen",
+    "meeting_key": 1219,
+    "name_acronym": "VER",
+    "session_key": 9158,
+    "team_colour": "3671C6",
+    "team_name": "Red Bull Racing"
+  }
+]
